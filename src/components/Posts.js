@@ -14,8 +14,8 @@ export default function Posts() {
         id: '2',
         username: 'thiagomm',
         userImg: '/avatar.png',
-        img: 'https://unsplash.com/photos/bRRy9ucK1rY',
-        caption: 'Desert',
+        img: 'https://images.unsplash.com/photo-1508107222753-0c236c337911?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=986&q=80',
+        caption: 'Paradise',
       },
     ]
     
