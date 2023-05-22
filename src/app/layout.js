@@ -3,7 +3,9 @@ import { Inter } from 'next/font/google'
 import Provider from "../components/Provider"
 import Header from "../components/Header"
 import Feed from '../components/Feed'
+
 import './globals.css'
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,8 +19,12 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <Provider>
-          <Header />    
-          <div className="bg-gray-50 min-h-screen"><Feed/>{children}</div> 
+          {/* <Header />     */}
+          <div className="bg-gray-50 min-h-screen">
+            {/* <Feed/> */}
+            {children}
+          </div> 
+          
         </Provider>
       </body>
     </html>

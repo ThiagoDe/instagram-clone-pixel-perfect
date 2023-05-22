@@ -3,12 +3,14 @@
 import Image from 'next/image'
 import React from 'react'
 import { MagnifyingGlassIcon, PlusCircleIcon } from '@heroicons/react/24/outline'
-import { BeakerIcon, HomeIcon } from '@heroicons/react/24/solid'
+import { HomeIcon } from '@heroicons/react/24/solid'
 import { useSession, signIn, signOut } from 'next-auth/react'
+import {useRecoilState} from 'recoil'
+import {modalState} from '../atom/modalAtom'
 
 export default function Header() {
     const {data: session} = useSession()
-    console.log(session)
+    const [open, setOpen] = useRecoilState(modalState)
     
   return (
     <div className='shadow-sm border-b sticky top-0 bg-white z-30'>
@@ -47,7 +49,7 @@ export default function Header() {
                 <HomeIcon className="hidden md:inline-flex h-6 cursor-pointer hover:scale-125 transition-transform duration-200 ease-out cursor-pointer" />
                 {session ? (
                     <>  
-                        <PlusCircleIcon className="h-6 cursor-pointer hover:scale-125 transition-transform duration-200 ease-out" />
+                        <PlusCircleIcon onClick={() => setOpen(true)} className="h-6 cursor-pointer hover:scale-125 transition-transform duration-200 ease-out" />
                         <img
                         onClick={signOut}
                         className="h-10 w-10 object-contain rounded-full  cursor-pointer"
