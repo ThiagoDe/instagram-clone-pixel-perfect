@@ -8,6 +8,7 @@ import { useSession, signIn, signOut } from 'next-auth/react'
 import {useRecoilState} from 'recoil'
 import {modalState} from '../atom/modalAtom'
 
+
 export default function Header() {
     const {data: session} = useSession()
     const [open, setOpen] = useRecoilState(modalState)
@@ -46,7 +47,7 @@ export default function Header() {
             </div>
 
             <div className="flex space-x-4 items-center">
-                <HomeIcon className="hidden md:inline-flex h-6 cursor-pointer hover:scale-125 transition-transform duration-200 ease-out cursor-pointer" />
+                <HomeIcon className="hidden md:inline-flex h-6 cursor-pointer hover:scale-125 transition-transform duration-200 ease-out " />
                 {session ? (
                     <>  
                         <PlusCircleIcon onClick={() => setOpen(true)} className="h-6 cursor-pointer hover:scale-125 transition-transform duration-200 ease-out" />
