@@ -17,9 +17,9 @@ export default function Header() {
     
   return (
     <div className="shadow-sm border-b sticky top-0 bg-white z-30">
-      <div className="flex items-center justify-between max-w-6xl mx-4 xl:mx-auto">
+      <div className="flex items-center justify-between md:max-w-[999px] mx-4 xl:mx-auto">
         {/* left */}
-        <div className="h-24 w-28 ml-6 relative hidden lg:inline-grid cursor-pointer">
+        <div className="h-24 w-32 ml-6 relative hidden lg:inline-grid cursor-pointer">
           <Image
             alt="insta logo"
             src="/instagram-logo.png"
