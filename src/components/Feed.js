@@ -14,7 +14,7 @@ export default function Feed() {
       className={` grid ${
         session
           ? 'grid-cols-1 md:grid-cols-3 md:max-w-[999px] mx-auto'
-          : 'grid-cols-1 md:grid-cols-2 md:max-w-3xl mx-auto'
+          : 'grid-cols-1 md:grid-cols-2 md:max-w-[985px] mx-auto'
       } `}
     >
       <section className="md:col-span-2">
