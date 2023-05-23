@@ -38,7 +38,7 @@ export default function Header() {
           />
         </div>
         {/* middle */}
-        <div className="relative mt-1">
+        {/* <div className="relative mt-1">
           <div className="absolute top-2 left-2 ">
             <MagnifyingGlassIcon className="h-5 text-gray-500" />
           </div>
@@ -47,7 +47,7 @@ export default function Header() {
             type="text"
             placeholder="Search"
           />
-        </div>
+        </div> */}
 
         <div className="flex space-x-4 items-center">
           <HomeIcon
