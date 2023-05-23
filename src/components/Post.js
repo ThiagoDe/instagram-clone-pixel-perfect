@@ -77,9 +77,9 @@ export default function Post({id, username, userImg, img, caption}) {
         <div className="flex justify-between px-4 pt-4">
           <div className="flex space-x-4">
             {hasLiked ? (
-            <Heart  onClick={likePost} className="text-red-400 btn" />
-            ): (
-            <HeartIcon onClick={likePost}  className="btn" />
+              <Heart onClick={likePost} className="text-red-400 btn" />
+            ) : (
+              <HeartIcon onClick={likePost} className="btn" />
             )}
             <ChatBubbleOvalLeftEllipsisIcon className="btn" />
           </div>
@@ -88,6 +88,15 @@ export default function Post({id, username, userImg, img, caption}) {
       )}
       {/* post comments */}
       <p className="p-5 truncate ">
+        {likes.length > 0 && (
+          <p className="font-bold mb-1">
+            {likes.length > 1 ? (
+              <span>{likes.length} likes</span>
+            ) : (
+              <span>{likes.length} like</span>
+            )}
+          </p>
+        )}
         <span className="font-bold mr-2">{username}</span>
         {caption}
       </p>
